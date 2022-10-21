@@ -43,7 +43,7 @@ router.get("/callback", async (req, res) => {
   console.log("Response code: ", req.query.code);
   console.log("Response state: ", req.query.state);
   res.redirect(
-    `http://localhost:4000/hp-applications/create/callback?code=${req.query.code}&state=${req.query.state}`
+    `https://main.d1qsaxxb4e74cl.amplifyapp.com/hp-applications/create/callback?code=${req.query.code}&state=${req.query.state}`
   );
 });
 
