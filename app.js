@@ -10,10 +10,7 @@ require("./loaders/cors")(app);
 require("./loaders/routes")(app);
 
 app.get("/", (req, res) => {
-  res.status(200).json({
-    status: "200",
-    message: "Initial Route Running...",
-  });
+  res.send("initial route running");
 });
 
 async function startServer() {
