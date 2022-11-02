@@ -52,23 +52,6 @@ app.post("/signature", async (req, res) => {
   }
 });
 
-async function startServer() {
-  app
-    .listen(config.PORT, () => {
-      console.log(
-        colors.fg.cyan,
-        `
-      ########################################
-      🛡️  Server is listening on port: ${config.PORT}  🛡️
-      ########################################
-      `,
-        colors.reset
-      );
-    })
-    .on("error", (err) => {
-      console.log("Server Starting Error: ", err);
-      process.exit(1);
-    });
-}
-
-startServer();
+app.listen(config.PORT, () => {
+  console.log(`Server is listening on port: ${config.PORT}`);
+});
