@@ -9,10 +9,9 @@ const config = require("./config/config");
 require("dotenv").config();
 require("./loaders/morgan")(app);
 require("./loaders/cors")(app);
-require("./loaders/routes")(app);
 
 app.get("/", (req, res) => {
-  res.send("initial route running");
+  res.status(200).json({ status: "initial route running" });
 });
 
 app.post("/signature", async (req, res) => {
